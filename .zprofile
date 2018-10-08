@@ -1,0 +1,1 @@
+/Users/tirke/.zprezto/runcoms/zprofile
