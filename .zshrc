@@ -28,11 +28,11 @@ zinit wait lucid for \
         alias ...='cd ../..'
         alias ....='cd ../../..'
         alias .....='cd ../../../..'
-        alias l='ls -lahG'
-        alias tf='terraform'    
-        export LSCOLORS='Exfxcxdxbxegedabagacad'
+        alias l='exa --long --header --git --all'
+        alias tf='terraform'
+        alias pnx='pnpm nx'        
         export AWS_DEFAULT_REGION=eu-central-1
-	    eval '$(fnm env)'        
+	    eval '$(fnm env --use-on-cd)'        
     " \
     OMZL::directories.zsh \
 	OMZL::git.zsh \
@@ -45,12 +45,11 @@ zinit wait lucid for \
 zinit wait lucid for \
     atinit"zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
-    atload"_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions \
     atload'bindkey "^[[A" history-substring-search-up;
         bindkey "^[[B" history-substring-search-down' \
     zsh-users/zsh-history-substring-search \
     zdharma-continuum/history-search-multi-word \
     blockf atpull'zinit creinstall -q .' \
     zsh-users/zsh-completions
+
 
