@@ -1,73 +1,41 @@
-ansible
-awscli
-awscli_saml_sso
-azure-cli
-azure-functions-core-tools@3
+==> Formulae
+awscli ca-certificates gdbm mpdecimal openssl@1.1 python@3.10 readline six sqlite xz
 bat
-brotli
-c-ares
-ca-certificates
-corretto
-corretto11
+cmake
+comby gmp libev pcre
+coreutils gmp
+deno
 dive
-docker
-docker-completion
-docker-compose-completion
-ferdi
-firefox-developer-edition
-flyctl
+exa
+fish ncurses pcre2
 fnm
-font-fira-code
-gdbm
-gettext
-gimme-aws-creds
-git
+gh
 gitui
 go
-grep
-httpie
-icu4c
+grep pcre
+heroku/brew/heroku heroku/brew/heroku-node
+hyperfine
 ipcalc
-jemalloc
-jetbrains-toolbox
-jfrog-cli
-jq
+jq oniguruma
 k6
-krb5
-kubernetes-cli
-libev
-libssh2
-libuv
-libyaml
-mpdecimal
-mpv
-nghttp2
-ngrok
-node
-oniguruma
-openssl@1.1
-pcre
-pcre2
-pipgrip
-pkg-config
-postman
+k9s
+mitmproxy ca-certificates gdbm mpdecimal openssl@1.1 protobuf python@3.10 readline six sqlite xz
+nmap ca-certificates openssl@1.1
+postgresql ca-certificates icu4c krb5 lz4 openssl@1.1 readline
 pulumi
-python@3.10
-python@3.8
-python@3.9
-readline
-ripgrep
-ruby
-rust
-scw
-six
-sqlite
-tcl-tk
-terraform-docs
+python@3.9 ca-certificates gdbm mpdecimal openssl@1.1 readline sqlite xz
+ripgrep pcre2
+turbot/tap/steampipe
+telnet
 tfenv
-tokei
-vagrant
-virtualbox
+wget ca-certificates gettext libidn2 libunistring openssl@1.1
+
+==> Casks
+docker
+jetbrains-toolbox
+microsoft-teams
+mpv
+postman
+signal
 visual-studio-code
-xz
-youtube-dl
+whatsapp
