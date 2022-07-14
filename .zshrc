@@ -13,7 +13,7 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 
 fpath+=( /usr/local/share/zsh/site-functions /opt/homebrew/share/zsh/site-functions )
-path+=( $HOME/go/bin $HOME/.cargo/bin $HOME/.yarn/bin )
+path+=( $HOME/go/bin $HOME/.cargo/bin $HOME/.yarn/bin $HOME/.bun/bin )
 
 zinit lucid for \
     atinit"HIST_STAMPS=dd.mm.yyyy" \
@@ -30,8 +30,12 @@ zinit wait lucid for \
         alias .....='cd ../../../..'
         alias l='exa --long --header --git --all'
         alias tf='terraform'
-        alias pnx='pnpm nx'        
+        alias pnx='pnpm exec nx'        
         export AWS_DEFAULT_REGION=eu-central-1
+        export AWS_PROFILE=staging
+        export BUN_INSTALL=/Users/tirke/.bun
+        export LC_ALL=en_US.UTF-8
+        export LANG=en_US.UTF-8
 	    eval '$(fnm env --use-on-cd)'        
     " \
     OMZL::directories.zsh \
@@ -51,5 +55,3 @@ zinit wait lucid for \
     zdharma-continuum/history-search-multi-word \
     blockf atpull'zinit creinstall -q .' \
     zsh-users/zsh-completions
-
-
