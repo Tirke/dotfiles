@@ -10,6 +10,15 @@ fi
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
 ### End of Zinit's installer chunk
 
 fpath+=( /usr/local/share/zsh/site-functions /opt/homebrew/share/zsh/site-functions )
@@ -22,7 +31,14 @@ zinit lucid for \
                 sindresorhus/pure
 
 zinit wait lucid for \
+    OMZL::termsupport.zsh \
     OMZL::completion.zsh \
+    OMZL::functions.zsh \
+    OMZL::directories.zsh \
+	OMZL::git.zsh \
+    OMZL::spectrum.zsh \
+    OMZP::brew \
+    OMZP::git \
     atload"
         alias ..='cd ..'
         alias ...='cd ../..'
@@ -38,12 +54,6 @@ zinit wait lucid for \
         export LANG=en_US.UTF-8
 	    eval '$(fnm env --use-on-cd)'        
     " \
-    OMZL::directories.zsh \
-	OMZL::git.zsh \
-    OMZP::brew \
-    OMZP::git \
-    OMZL::spectrum.zsh \
-	OMZL::termsupport.zsh \
     agkozak/zsh-z \
 
 zinit wait lucid for \
@@ -55,3 +65,7 @@ zinit wait lucid for \
     zdharma-continuum/history-search-multi-word \
     blockf atpull'zinit creinstall -q .' \
     zsh-users/zsh-completions
+
+
+# bun completions
+[ -s "/Users/thomasschersach/.bun/_bun" ] && source "/Users/thomasschersach/.bun/_bun"
