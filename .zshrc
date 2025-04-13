@@ -52,6 +52,7 @@ zinit wait lucid for \
         export BUN_INSTALL=/Users/tirke/.bun
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
+        export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 	    eval '$(fnm env --use-on-cd)'        
     " \
     agkozak/zsh-z \
